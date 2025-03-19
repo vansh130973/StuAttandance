@@ -1,12 +1,8 @@
 <?php 
-// Hostname
-$host = "localhost";
-// Username
-$uname = "root";
-// Password
-$pw = "root";
-// Database Name
-$dbname = "attendancemsystem";
+$host = getenv("localhost");
+$uname = getenv("phpmyadmin");
+$pw = getenv("root");
+$dbname = getenv("attendancemsystem");
 
 try{
     $conn = new MySQLi($host, $uname, $pw, $dbname);
